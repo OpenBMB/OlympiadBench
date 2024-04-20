@@ -3,7 +3,7 @@
 <p align="center"> <img src="resources/title.png" style="width: 95%;" id="title-icon">       </p>
 
 <p align="center">
-   ⏬ <a href="https://drive.google.com/file/d/1-7bYwoyNQdMr_HEcexRRcMLbXXKjz-5U/view?usp=sharing" target="_blank">Data</a> •   📃 <a href="https://arxiv.org/pdf/2402.14008.pdf" target="_blank">arXiv</a>
+   ⏬ <a href="https://drive.google.com/file/d/1-CWyWA01BQ2RObs-HXKNHarByDwFXloR/view?usp=drive_link" target="_blank">Data</a> •   📃 <a href="https://arxiv.org/pdf/2402.14008.pdf" target="_blank">arXiv</a>
 </p>
 
 
@@ -14,7 +14,7 @@ Olympiad-Level Bilingual Multimodal Scientific Problems](https://arxiv.org/pdf/2
 
 - **[2024-03-24]** We publish the [experimental code](./inference/) and make updates to the dataset【Previous dataset can be downloaded via this [link](https://drive.google.com/file/d/1Ga_gnrgRWsM59mxLZBa_0GQ2sRfNiTtL/view?usp=sharing)】.
 
-- **[2024-02-16]** The 🔥🔥OlympiadBench🔥🔥 benchmark is released! You can download the dataset from [here](https://drive.google.com/file/d/1-7bYwoyNQdMr_HEcexRRcMLbXXKjz-5U/view?usp=sharing).
+- **[2024-02-16]** The 🔥🔥OlympiadBench🔥🔥 benchmark is released! You can download the dataset from [here](https://drive.google.com/file/d/1-CWyWA01BQ2RObs-HXKNHarByDwFXloR/view?usp=drive_link).
 
 ## Overview
 
