@@ -99,4 +99,4 @@ def judge_result():
 
 
 if __name__ == '__main__':
-	judge_result
+	judge_result()
