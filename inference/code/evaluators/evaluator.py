@@ -109,17 +109,21 @@ class Evaluator:
 		pass
 
 	def get_image_mapping_dict(self):
-		self.image_parent_dir = os.path.join(os.path.dirname(self.json_dataset_path), 'images')
+		print(self.json_dataset_path)
+		# self.image_parent_dir = os.path.join(os.path.dirname(self.json_dataset_path), 'images')
+		self.image_parent_dir = os.path.join(os.path.dirname(os.path.dirname(self.json_dataset_path)), 'images')
 		if not os.path.exists(self.image_parent_dir):
 			print('Cannot find image directory!')
 			exit()
 
 	def eval_dataset(self, json_dataset_path, json_dataset, save_result_dir):
 		self.json_dataset_path = json_dataset_path
-		self.get_image_mapping_dict()
+		self.get_image_mapping_dict() # Confirm if there is an image folder
 		self.is_theorem_proving = 'TP' in json_dataset_path
 		self.is_math = 'maths' in json_dataset_path
 		self.is_chinese = 'zh' in json_dataset_path
+
+		model_name = self.model_name.split("/")[-1].strip() # For paths like deepseek, extract the model name.
 
 		if not os.path.exists(save_result_dir):
 			os.mkdir(save_result_dir)
@@ -131,23 +135,23 @@ class Evaluator:
 			if self.is_math:
 				input = self.make_input(prompt, question['question'])
 			else:
-				if 'context' in question.keys():
+				if 'context' in question.keys() and question['context']: # cannot be null
 					input = self.make_input(prompt, question['context']+'\n'+question['question'])
 				else:
 					input = self.make_input(prompt, question['question'])
 			answer = self.get_answer(input)
 			if 'model_output' not in question.keys():
-				question['model_output'] = {self.model_name:{'raw_output':answer}}
+				question['model_output'] = {model_name:{'raw_output':answer}}
 			else:
-				question['model_output'][self.model_name] = {'raw_output':answer}
+				question['model_output'][model_name] = {'raw_output':answer}
 			temp_result.append(question)
 			if id % 100 == 99:
 				save_start_id = id - 99
-				with open(os.path.join(save_result_dir, f'{self.model_name}_{save_start_id}_to_{id}.json'), 'w', encoding='utf-8') as f:
+				with open(os.path.join(save_result_dir, f'{model_name}_{save_start_id}_to_{id}.json'), 'w', encoding='utf-8') as f:
 					json.dump(temp_result, f, ensure_ascii=False, indent=4)
 				temp_result = []
 		if temp_result:
 			save_start_id = 100 * int(id / 100)
-			with open(os.path.join(save_result_dir, f'{self.model_name}_{100*(int(id/100))}_to_{id}.json'), 'w', encoding='utf-8') as f:
+			with open(os.path.join(save_result_dir, f'{model_name}_{100*(int(id/100))}_to_{id}.json'), 'w', encoding='utf-8') as f:
 				json.dump(temp_result, f, ensure_ascii=False, indent=4)
 		print(f'Evaluation finished for {json_dataset_path}.')

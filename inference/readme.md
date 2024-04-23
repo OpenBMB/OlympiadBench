@@ -14,6 +14,7 @@ cd code/
 # run evaluation
 python evaluate_all.py --model_name <MODEL_NAME: gpt-4v/text-only-gpt-4/qwen-vl/gemini-pro-vision> --dataset_name <DATASET_NAME>
 # automated judging
+cd ..
 python judge.py
 # print final results
 python calculate_accuracy.py
@@ -25,6 +26,7 @@ cd code/
 # run evaluation
 python evaluate_all.py --model_name <PATH_TO_MODEL_FOLDER> --dataset_name <DATASET_NAME>
 # automated judging
+cd ..
 python judge.py
 # print final results
 python calculate_accuracy.py
@@ -45,7 +47,7 @@ Each model inherits the `Evaluator` class to define a corresponding subclass (e.
 During evaluation, run in the `code` folder `python evaluate_all.py` to evaluate the model, with command line parameters:
 
 - `--model_name` (required): The name of the model to be evaluated. For closed-source models, sometimes it should be the path to the model.
-- `--dataset_name`(required): The dataset to be evaluated.
+- `--dataset_path`(required): The dataset to be evaluated.
 - `--save_dir`: Path to save the generated result, default to `generated`.
 - `--saving_name`: The name of the folder to save results under `save_dir`, default to `model_name` if not given.
 - `--cuda_device`: Used for closed-source models.
