@@ -12,6 +12,8 @@ Olympiad-Level Bilingual Multimodal Scientific Problems](https://arxiv.org/pdf/2
 
 ## News!
 
+- **[2024-05-16]** OlympiadBench has been accepted to the main conference at [ACL 2024](https://2024.aclweb.org/).
+
 - **[2024-03-24]** We publish the [experimental code](./inference/) and make updates to the dataset【Previous dataset can be downloaded via this [link](https://drive.google.com/file/d/1Ga_gnrgRWsM59mxLZBa_0GQ2sRfNiTtL/view?usp=sharing)】.
 
 - **[2024-02-16]** The 🔥🔥OlympiadBench🔥🔥 benchmark is released! You can download the dataset from [here](https://drive.google.com/file/d/1-CWyWA01BQ2RObs-HXKNHarByDwFXloR/view?usp=drive_link).
