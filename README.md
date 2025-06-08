@@ -5,7 +5,8 @@
 
 <p align="center">
   📄 <a href="https://arxiv.org/abs/2402.14008" target="_blank">Paper</a> &nbsp; | &nbsp;
-  🤗 <a href="https://huggingface.co/datasets/Hothan/OlympiadBench" target="_blank">Hugging Face</a>
+  🤗 <a href="https://huggingface.co/datasets/Hothan/OlympiadBench" target="_blank">Hugging Face</a> &nbsp; | &nbsp;
+  ⏬ <a href="https://drive.google.com/file/d/1DnTCrvIv5vbfDmi2yYaCWnzUhvD34oB0/view?usp=sharing" target="_blank">Data</a>
 </p>
 
 
@@ -14,7 +15,7 @@ Olympiad-Level Bilingual Multimodal Scientific Problems](https://arxiv.org/pdf/2
 
 ## News!
 
-- **[2024-07-17]** We update the dataset and upload it to [Hugging Face](https://huggingface.co/datasets/Hothan/OlympiadBench). The data corresponding to the results in the paper can still be accessed via this [link](https://drive.google.com/file/d/1-CWyWA01BQ2RObs-HXKNHarByDwFXloR/view?usp=drive_link).
+- **[2024-07-17]** We update the dataset and upload it to [Hugging Face](https://huggingface.co/datasets/Hothan/OlympiadBench). The whole data can be accessed via this [**download link**](https://drive.google.com/file/d/1DnTCrvIv5vbfDmi2yYaCWnzUhvD34oB0/view?usp=sharing).
 
 - **[2024-05-16]** OlympiadBench has been accepted to the main conference at [ACL 2024](https://2024.aclweb.org/).
 
